@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background:rgb(204, 204, 204);
+}
+h3,p{
+    color:#fff;
+}
+
+/* --------------------------------- */
+main{
+    width: 100%;
+    padding: 70px 0;
+}
+.places-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}
+.place{
+   height:220px;
+   border-radius: 10px;
+   position: relative;
+   overflow: hidden;
+   box-shadow:3px 3px 7px rgba(0,0,0,0.288),-3px -3px 7px rgba(255, 255, 255,1);
+}
+.place img{
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+    display: block;
+}
+.desc{
+    width:100%;
+    height:0;
+    background: linear-gradient(rgba(0,0,0,0.5),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+    font-size: 14px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.desc h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.desc p{
+    font-size: 0.8rem;
+}
+.desc a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+.place:hover img{
+    transform: scale(1.1);
+}
+.place:hover .desc{
+    height:100%;
+}
+.copyright{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background: #000000;
+    font-weight: 300;
+}
+.copyright p{
+    margin:0;
+}
+.copyright i{
+    color: #ff004f;
+}
